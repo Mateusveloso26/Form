@@ -1,14 +1,14 @@
-const inputs = document.querySelectorAll('.input')
 const form = document.getElementById('form')
+
+const inputs = document.querySelectorAll('.input')
 const msgErro = document.querySelectorAll('.erro')
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     validarEmail();
     validarSenha();
-
-
 });
+
 
 function inputErro(index) {
     inputs[index].style.border = '3px solid #ef4444';
@@ -19,7 +19,6 @@ function removerErro(index) {
     inputs[index].style.border = '';
     msgErro[index].style.display = 'none';
 }
-
 
 function validarEmail() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
